@@ -117,15 +117,16 @@
                                     </span>
                                 @endif
                             </div>
+                            <br>
                             <div class="d-flex justify-content-center">
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-4" style="margin: auto">
                                         <a class="btn btn-info" href="{{ route('auth.socilate.redirect', 'google') }}">
-                                            Google</a>
+                                            <i class="fab fa-google"></i></a>
                                     </div>
                                     <div class="col-4">
                                         <a class="btn btn-info" href="{{ route('auth.socilate.redirect', 'facebook') }}">
-                                            Facebook</a>
+                                            <i class="fab fa-facebook"></i></a>
                                     </div>
 
                                 </div>

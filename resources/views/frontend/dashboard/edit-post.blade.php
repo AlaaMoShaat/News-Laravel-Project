@@ -28,7 +28,7 @@
                 @csrf
                 @method('PUT')
                 <section id="posts-section" class="posts-section">
-                    <h2>Your Posts</h2>
+                    <h2>Edit Post</h2>
                     <ul class="list-unstyled user-posts">
 
                         <!-- Editable Title -->
