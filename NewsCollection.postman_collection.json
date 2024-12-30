@@ -1,0 +1,1178 @@
+{
+	"info": {
+		"_postman_id": "f2ebdc57-7584-4ccb-a1ca-aa4bf66372a2",
+		"name": "NewsCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30733794",
+		"_collection_link": "https://lively-firefly-38692.postman.co/workspace/My-Workspace~1c50d535-5d67-4a70-be8f-641b89744898/collection/30733794-f2ebdc57-7584-4ccb-a1ca-aa4bf66372a2?action=share&source=collection_link&creator=30733794"
+	},
+	"item": [
+		{
+			"name": "general",
+			"item": [
+				{
+					"name": "home",
+					"item": [
+						{
+							"name": "get-posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/posts",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show-post",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/posts/show/{slug}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"posts",
+										"show",
+										"{slug}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post-comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/posts/comments/{slug}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"posts",
+										"comments",
+										"{slug}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search-posts",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "related-sites",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/related-sites",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"related-sites"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "get-category-posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/categories/{category_slug}/posts",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"{category_slug}",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "setting",
+					"item": [
+						{
+							"name": "get-settings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/settings",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"settings"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "post-contact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "alaa",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "alaaalaaalaa",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "cxvxbckjzcom@s.com",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "vbkxjbvkx",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "021515515151",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/contacts/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"contacts",
+										"store"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "password",
+					"item": [
+						{
+							"name": "forget-password-email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "michale.schowalter@example.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/password/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"password",
+										"email"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "michale.schowalter@example.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123123123",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123123123123",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "27370",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/password/reset",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"password",
+										"reset"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.unset(\"token\");\r",
+									"pm.collectionVariables.set(\"token\", jsonData.data.token);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "pat.conn@example.org",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|Ig3E3aS2QkZChePOqQyDRt0rsdRKb9EVmjG8reSC6e943192",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/auth/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.unset(\"token\");\r",
+									"pm.collectionVariables.set(\"token\", jsonData.data.token);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|XUvjAs0sMT5xpfm0TH8Q689LfwTIolDY4MLAnuz812d3d2dc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "gvjk4s",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "alaamsh2s12@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "alaamsh1212s",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01025581551",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "eg",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "eg",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "eg",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/OneDrive/الصور/لقطات الشاشة/Screenshot 2023-09-17 202011.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "19|LNrVazH12YXSWj0PsnwVbWpgZ77yUdYjTh3wX7Kl9b7095dc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "codeOtp",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/email/verify",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"email",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-code-again",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|hHu5eZJoRNG0nJSBaNJoqir2m3E2E8l4vFKo5RJ6202328fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/auth/email/verify",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"email",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "update-setting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|swSnSqoBgGAou9qrN58SMWu8pcwDuCZ5SoCssQTU7e83bb48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "alaamshaat",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "alaamshaat@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "alaamshaat",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/OneDrive/الصور/لقطات الشاشة/Screenshot 2023-09-17 202011.png"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Eg",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Eg",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "Eg",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "010101010101",
+									"type": "text"
+								},
+								{
+									"key": "is_profile_complete",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/account/setting/{user_id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"setting",
+								"{user_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/account/user-posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"user-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store-user-post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|4Owep9rctcMjCJBXLWX26qHmOlpSSTgtOs6j2Q8g7c910862",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Post From Postman2",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "Post From Post2manPost Fro2m PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From Postman",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "comment_able",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "small_desc",
+									"value": "Post From PostmanPost From PostmanPost From PostmanPost From PostmanPost From Postman",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/pc/OneDrive/الصور/لقطات الشاشة/Screenshot 2023-09-17 204144.png"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/account/user-posts/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"user-posts",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user-post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|O3rye2IARCIiwEHv4KZRLlcYvoewb4YfPzPkFAENa8960113",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Post From Postman22 update",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "Post From Post2manPost Fro2m PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From PostmanPost From Postman22",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "comment_able",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "small_desc",
+									"value": "Post From Postma22nPost From PostmanPost From PostmanPost From PostmanPost From Postman",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/pc/OneDrive/الصور/لقطات الشاشة/Screenshot 2023-09-17 202055.png"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/account/user-posts/update/{post_id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"user-posts",
+								"update",
+								"{post_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy-user-post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|4Owep9rctcMjCJBXLWX26qHmOlpSSTgtOs6j2Q8g7c910862",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account/user-posts/destroy/{post_id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"user-posts",
+								"destroy",
+								"{post_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-post-comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|O3rye2IARCIiwEHv4KZRLlcYvoewb4YfPzPkFAENa8960113",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/account/user-posts/comments/{post_id}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"user-posts",
+								"comments",
+								"{post_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store-post-comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|xUKMAyLdRAeCp7tnI8f7KLlkZvf2vcO6cukFQTIa046a6e39",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "comment from postman2221Aaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/account/user-posts/comments/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"user-posts",
+								"comments",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-notifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|ro2AVQFTbztyT6ASR1OoHF5yGmQqFln7jFUIEjte82bd573d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/account/notifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read-notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|ro2AVQFTbztyT6ASR1OoHF5yGmQqFln7jFUIEjte82bd573d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account/notifications/read/29cda84b-e215-4120-b495-7a812dd6a32c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"notifications",
+								"read",
+								"29cda84b-e215-4120-b495-7a812dd6a32c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "18|Kbq92gkf5TYxHGmlmS0d7GNEUkql5pZ6QQ7iTWjH5721f879",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/account/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "token",
+			"type": "string"
+		}
+	]
+}
